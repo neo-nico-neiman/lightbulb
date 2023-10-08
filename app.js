@@ -1,5 +1,6 @@
 const express = require('express');
 const server = require('http').createServer();
+const { stringify } = require('./utils');
 
 const app = express();
 
@@ -34,7 +35,3 @@ wss.broadcast = function broadcast(data) {
 		client.send(data);
 	});
 };
-
-function stringify(data) {
-	return JSON.stringify(data);
-}
