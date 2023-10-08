@@ -5,9 +5,32 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Light Bulb</title>
+		<style>
+			.visitors {
+				display: flex;
+				flex-direction: row;
+			}
+		</style>
+		<script>
+			let ws;
+			const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
+			ws = new WebSocket(`${protocol}://${window.location.host}`);
+			ws.onmessage = (event) => {
+				if (JSON.parse(event.data).visitors) {
+					document.getElementById('visitors-counter').innerText = JSON.parse(
+						event.data
+					).visitors;
+				}
+			};
+		</script>
 	</head>
+
 	<body>
 		<h3>💡 Light Bulb 💡</h3>
 		<p>The place to enlight your mind</p>
+		<div class="visitors">
+			<p><b>Current visitors: &nbsp;</b></p>
+			<p id="visitors-counter"></p>
+		</div>
 	</body>
 </html>
