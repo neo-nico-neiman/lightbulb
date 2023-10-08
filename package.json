@@ -1,18 +1,12 @@
 {
 	"name": "lightbulb",
 	"version": "1.0.0",
-	"description": "",
+	"description": "A testing app",
 	"main": "app.js",
-	"scripts": {
-		"test": "jest"
-	},
-	"author": "",
+	"author": "Nico Neiman",
 	"license": "ISC",
 	"dependencies": {
 		"express": "^4.18.2",
 		"ws": "^8.14.2"
-	},
-	"devDependencies": {
-		"jest": "^29.7.0"
 	}
 }
