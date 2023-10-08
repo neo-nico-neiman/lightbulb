@@ -1,15 +1,18 @@
 {
-  "name": "fsfe",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.18.2",
-    "ws": "^8.14.2"
-  }
+	"name": "lightbulb",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.18.2",
+		"ws": "^8.14.2"
+	},
+	"devDependencies": {
+		"jest": "^29.7.0"
+	}
 }
